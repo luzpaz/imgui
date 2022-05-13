@@ -80,7 +80,7 @@ Other Changes:
 - InputScalar: Automatically allow scientific input when format is float/double (without extra flag).
 - Nav: Fixed nav movement in a scope with only one disabled item from focusing the disabled item. (#5189)
 - IsItemHovered(): added ImGuiHoveredFlags_NoNavOverride to disable the behavior where the
-  return value is overriden by focus when gamepad/keyboard navigation is active.
+  return value is overridden by focus when gamepad/keyboard navigation is active.
 - InputText: Fixed pressing Tab emitting two tabs characters because of dual Keys/Chars events being
   trickled with the new input queue (happened on some backends only). (#2467, #1336)
 - Tables: Fixed incorrect border height used for logic when resizing one of several synchronized
@@ -769,7 +769,7 @@ Other Changes:
   alpha compositing and transparent windows. (#2766, #3447 etc.).
 - Backends: OpenGL, Vulkan, DX9, DX10, DX11, DX12, Metal, WebGPU, Allegro: Rework blending equation to
   preserve alpha in output buffer (using SrcBlendAlpha = ONE, DstBlendAlpha = ONE_MINUS_SRC_ALPHA consistently
-  accross all backends), facilitating compositing of the output buffer with another buffer.
+  across all backends), facilitating compositing of the output buffer with another buffer.
   (#2693, #2764, #2766, #2873, #3447, #3813, #3816) [@ocornut, @thedmd, @ShawnM427, @Ubpa, @aiekick]
 - Backends: DX9: Fix to support IMGUI_USE_BGRA_PACKED_COLOR. (#3844) [@Xiliusha]
 - Backends: DX9: Fix to support colored glyphs, using newly introduced 'TexPixelsUseColors' info. (#3844)
@@ -1054,7 +1054,7 @@ Other Changes:
 - Columns: Fix inverted ClipRect being passed to renderer when using certain primitives inside of
   a fully clipped column. (#3475) [@szreder]
 - Popups, Tooltips: Fix edge cases issues with positioning popups and tooltips when they are larger than
-  viewport on either or both axises. [@Rokups]
+  viewport on either or both axes. [@Rokups]
 - Fonts: AddFontDefault() adjust its vertical offset based on floor(size/13) instead of always +1.
   Was previously done by altering DisplayOffset.y but wouldn't work for DPI scaled font.
 - Metrics: Various tweaks, listing windows front-to-back, greying inactive items when possible.
@@ -2682,7 +2682,7 @@ Other Changes:
 - Window: Made it possible to use SetNextWindowPos() on a child window.
 - Window: Fixed a one frame glitch. When an appearing window claimed the focus themselves, the title bar wouldn't use the focused color for one frame.
 - Window: Added ImGuiWindowFlags_ResizeFromAnySide flag to resize from any borders or from the lower-left corner of a window. This requires your backend to honor GetMouseCursor() requests for full usability. (#822)
-- Window: Sizing fixes when using SetNextWindowSize() on individual axises.
+- Window: Sizing fixes when using SetNextWindowSize() on individual axes.
 - Window: Hide new window for one frame until they calculate their size. Also fixes SetNextWindowPos() given a non-zero pivot. (#1694)
 - Window: Made mouse wheel scrolling accommodate better to windows that are smaller than the scroll step.
 - Window: SetNextWindowContentSize() adjust for the size of decorations (title bar/menu bar), but _not_ for borders are we consistently make borders not affect layout.
@@ -3248,7 +3248,7 @@ Changes:
 - PlotHistogram(): improved rendering of histogram with a lot of values.
 - Dummy(): creates an item so functions such as IsItemHovered() can be used.
 - BeginChildFrame() helper: added the extra_flags parameter.
-- Scrollbar: fixed rounding of background + child window consistenly have ChildWindowBg color under ScrollbarBg fill. (#355).
+- Scrollbar: fixed rounding of background + child window consistently have ChildWindowBg color under ScrollbarBg fill. (#355).
 - Scrollbar: background color less translucent in default style so it works better when changing background color.
 - Scrollbar: fixed minor rendering offset when borders are enabled. (#365)
 - ImDrawList: fixed 1 leak per ImDrawList using the ChannelsSplit() API (via Columns). (#318)
@@ -3264,7 +3264,7 @@ Changes:
 - Internal: Extracted a EndFrame() function out of Render() but kept it internal/private + clarified some asserts. (#335)
 - Internal: Added missing IMGUI_API definitions in imgui_internal.h (#326)
 - Internal: ImLoadFileToMemory() return void\* instead of taking void*\* + allow optional int\* file_size.
-- Demo: Horizontal scrollbar demo allows to enable simultanaeous scrollbars on both axises.
+- Demo: Horizontal scrollbar demo allows to enable simultaneous scrollbars on both axes.
 - Tools: binary_to_compressed_c.cpp: added -nocompress option.
 - Examples: Added example for the Marmalade platform.
 - Examples: Added batch files to build Windows examples with VS.
